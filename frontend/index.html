@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heart Disease Prediction Analysis</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<aside id="side"><div class="brand"><span class="logo">♥</span><div><b>Heart Disease</b><small>Prediction Analysis</small></div></div>
+<nav><a href="#overview" class="on">⌂ Project Overview</a><a href="#prep">▤ Data Preprocessing</a><a href="#eda">▥ Exploratory Analysis</a>
+<a href="#models">◎ Model Evaluation</a><a href="#predict">✚ Try a Prediction</a><a href="#findings">✓ Findings</a></nav></aside>
+<main>
+<section id="overview"><div class="hero"><div><p class="tag">CSE443 · DATA ANALYSIS</p><h1>Heart Disease<br><span>Prediction Analysis</span></h1>
+<p class="sub">Dataset, preprocessing, exploratory analysis, and a comparison of six machine learning models, served by a Python/Flask backend.</p>
+<a class="btn" href="#eda">Explore the Analysis →</a></div><div class="orb"><div class="fc f1"><b>EDA</b><small>Patient patterns</small></div><div class="fc f2"><b>Models</b><small>6 classifiers</small></div></div></div>
+<p class="tag">AT A GLANCE</p><h2>Project Overview</h2><div class="cards" id="glance"></div></section>
+<section id="prep"><p class="tag">DATA PREPROCESSING</p><h2>Cleaning the dataset</h2><div class="cards" id="prepcards"></div>
+<div class="steps" id="steps"></div><div class="panel"><h3>Column summary (raw data)</h3><div class="scroll"><table id="coltable"></table></div></div></section>
+<section id="eda"><p class="tag">EXPLORATORY ANALYSIS</p><h2>What the data shows</h2><div class="grid">
+<div class="panel"><h3>Heart disease distribution</h3><canvas id="c1"></canvas></div><div class="panel"><h3>Age distribution</h3><canvas id="c2"></canvas></div>
+<div class="panel"><h3>Sex vs heart disease</h3><canvas id="c3"></canvas></div><div class="panel"><h3>Chest pain type distribution</h3><canvas id="c4"></canvas></div>
+<div class="panel"><h3>Average cholesterol by age group</h3><canvas id="c5"></canvas></div><div class="panel"><h3>Correlation with target</h3><canvas id="c6"></canvas></div></div></section>
+<section id="models"><p class="tag">MODEL EVALUATION</p><h2>Six models compared</h2><p class="note" id="split"></p>
+<div class="panel"><div class="scroll"><table id="modeltable"></table></div></div>
+<div class="grid"><div class="panel"><h3>Accuracy by model</h3><canvas id="m1"></canvas></div><div class="panel"><h3>ROC curves</h3><canvas id="m2"></canvas></div>
+<div class="panel"><h3>Confusion matrix <select id="cmsel"></select></h3><div id="cm"></div></div><div class="panel"><h3>Random Forest: top features</h3><canvas id="m3"></canvas></div></div>
+<div class="panel warn" id="leak"></div></section>
+<section id="predict"><p class="tag">LIVE PREDICTION</p><h2>Try a patient</h2><div class="panel"><form id="form"></form><button class="btn" id="go">Predict</button><div id="out"></div>
+<p class="note">Educational project only. Not medical advice.</p></div></section>
+<section id="findings"><p class="tag">FINDINGS</p><h2>Key takeaways</h2><ul class="panel" id="find"></ul></section>
+</main>
+<script src="vendor/chart.umd.js"></script><script src="app.js"></script></body></html>
